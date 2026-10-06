@@ -36,7 +36,10 @@ cgettext = gettext.gettext
 
 # Tell gettext where to find localized strings.
 #
-localedir = os.path.join('/home/runner/work/orca/orca/orca','share/locale')
+localedir = os.path.join(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "..")),
+    'share/locale',
+)
 gettext.bindtextdomain ("orca", localedir)
 gettext.textdomain("orca")
 

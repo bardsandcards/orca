@@ -28,13 +28,13 @@ version     = "50.2"
 revision = "993c3a3"
 
 # "--prefix" parameter used when configuring the build.
-prefix      = "/home/runner/work/orca/orca/orca"
+prefix      = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 
 # The package name (should be "orca").
 package     = "orca"
 
 # The location of the data directory (usually "share").
-datadir = os.path.join('/home/runner/work/orca/orca/orca','share')
+datadir = os.path.join(prefix, 'share')
 
 # The directory where we could find liblouis translation tables.
 tablesdir = ""
