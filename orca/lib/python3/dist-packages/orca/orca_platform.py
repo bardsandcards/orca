@@ -28,13 +28,19 @@ version     = "50.2"
 revision = "993c3a3"
 
 # "--prefix" parameter used when configuring the build.
-prefix      = "/home/runner/work/orca/orca/orca"
+import os as _guidepup_os
+_GUIDEPUP_ORCA_PREFIX = _guidepup_os.path.realpath(
+    _guidepup_os.path.join(
+        _guidepup_os.path.dirname(_guidepup_os.path.realpath(__file__)), "..", "..", "..", ".."
+    )
+)
+prefix      = _GUIDEPUP_ORCA_PREFIX
 
 # The package name (should be "orca").
 package     = "orca"
 
 # The location of the data directory (usually "share").
-datadir = os.path.join('/home/runner/work/orca/orca/orca','share')
+datadir = os.path.join(_GUIDEPUP_ORCA_PREFIX,'share')
 
 # The directory where we could find liblouis translation tables.
 tablesdir = ""
